@@ -1,6 +1,6 @@
 = meteoub-gem
 
-Description goes here.
+A rewrite of the MeteoUB library wich gets, parses and stores weather data from [infomet.am.ub.es](http://infomet.am.ub.es/campbell/www.dat)
 
 == Contributing to meteoub-gem
  

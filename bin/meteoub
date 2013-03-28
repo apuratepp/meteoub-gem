@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+
+require 'meteo_ub'
+
+dades = MeteoUB::Data.new
+p dades
+dades.save
+
+p MeteoUB::Measure.count
+p MeteoUB::Measure.last.temperature

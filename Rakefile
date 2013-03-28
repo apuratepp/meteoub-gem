@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "meteoub-gem"
   gem.homepage = "http://github.com/apuratepp/meteoub-gem"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A rewrite of the MeteoUB library wich gets, parses and stores weather data from infomet.am.ub.es}
+  gem.description = %Q{A rewrite of the MeteoUB library wich gets, parses and stores weather data from infomet.am.ub.es}
   gem.email = "apuratepp@gmail.com"
   gem.authors = ["Josep"]
   # dependencies defined in Gemfile
