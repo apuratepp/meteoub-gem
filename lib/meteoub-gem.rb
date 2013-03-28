@@ -4,11 +4,7 @@ require 'active_record'
 
 module MeteoUB
   DATA_URL = 'http://infomet.am.ub.es/campbell/www.dat'
-  DB_PATH  = File.join(File.dirname(__FILE__), '..', 'db', 'meteo_ub.sqlite3')
   
-  ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => DB_PATH)
-  MeasureTable.up unless ActiveRecord::Base.connection.table_exists? :measures
-
   class Data
     attr_accessor :data_uri
     attr_accessor :raw_data

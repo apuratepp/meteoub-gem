@@ -2,11 +2,11 @@
 
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
-require 'meteo_ub'
+require 'meteoub-gem'
+
+# DB_PATH  = File.join(File.dirname(__FILE__), '..', 'db', 'meteo_ub.sqlite3')
+# ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => DB_PATH)
+# MeteoUB::MeasureTable.up unless ActiveRecord::Base.connection.table_exists? :measures
 
 dades = MeteoUB::Data.new
-p dades
-dades.save
-
-p MeteoUB::Measure.count
-p MeteoUB::Measure.last.temperature
+p dades.temperature
