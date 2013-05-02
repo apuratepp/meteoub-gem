@@ -10,3 +10,5 @@ require 'meteoub-gem'
 
 dades = MeteoUB::Data.new
 p dades.temperature
+p dades.temperature_max, dades.datetime_max
+p dades.temperature_min, dades.datetime_min

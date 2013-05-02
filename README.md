@@ -1,12 +1,12 @@
-= meteoub-gem
+### meteoub-gem
 
-A rewrite of the MeteoUB library which gets, parses and stores weather data from [infomet.am.ub.es](http://infomet.am.ub.es/campbell/www.dat)
+A rewrite of the MeteoUB library which gets, parses and stores weather data from *infomet.am.ub.es*: [www.dat](http://infomet.am.ub.es/campbell/www.dat) and [maxmin.dat](http://infomet.am.ub.edu/campbell/maxmin.dat)
 
-== License
+### License
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Josep
+Copyright (c) 2009 - 2013 Josep
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
