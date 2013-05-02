@@ -5,28 +5,29 @@
 
 Gem::Specification.new do |s|
   s.name = "meteoub-gem"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Josep"]
-  s.date = "2013-03-28"
+  s.date = "2013-05-02"
   s.description = "A rewrite of the MeteoUB library wich gets, parses and stores weather data from infomet.am.ub.es"
   s.email = "apuratepp@gmail.com"
   s.executables = ["meteoub"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "bin/meteoub",
     "lib/meteoub-gem.rb",
+    "meteoub-gem.gemspec",
     "test/helper.rb",
     "test/test_meteoub-gem.rb"
   ]
