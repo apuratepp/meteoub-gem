@@ -1,5 +1,9 @@
 ### meteoub-gem
 
+https://api.travis-ci.org/apuratepp/meteoub-gem.png
+
+"!https://api.travis-ci.org/apuratepp/meteoub-gem.png!":https://api.travis-ci.org/apuratepp/meteoub-gem
+
 A rewrite of the MeteoUB library which gets, parses and stores weather data from *infomet.am.ub.es*: [www.dat](http://infomet.am.ub.es/campbell/www.dat) and [maxmin.dat](http://infomet.am.ub.edu/campbell/maxmin.dat)
 
 ### License
