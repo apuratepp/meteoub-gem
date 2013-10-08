@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "meteoub-gem"
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Josep"]
-  s.date = "2013-05-02"
+  s.date = "2013-10-08"
   s.description = "A rewrite of the MeteoUB library wich gets, parses and stores weather data from infomet.am.ub.es"
   s.email = "apuratepp@gmail.com"
   s.executables = ["meteoub"]
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".travis.yml",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
