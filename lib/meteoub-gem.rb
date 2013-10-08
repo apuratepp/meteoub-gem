@@ -57,21 +57,22 @@ module MeteoUB
     end
     
     def parse_date(date_raw)
-      hour, minutes = date_raw.split(":")
-      if minutes == 60
-        minutes = 0
-        hour += 1
-      end
+      hour, minutes = sanitize_time(date_raw.split(":"))
       DateTime.strptime(@raw_data[0] + " #{hour}:#{minutes} UTC", "%d-%m-%y %k:%M %Z")
     end
+
     def parse_maxmin(maxmin_raw)
       temperature, time, date = maxmin_raw.split(" ")
-      hour, minutes = time.split(":")
-      if minutes == 60
-        minutes = 0
-        hour += 1
-      end
+      hour, minutes = sanitize_time(time.split(":"))
       [temperature.to_f, DateTime.strptime("#{date} #{hour}:#{minutes} UTC", "%Y%m%d %k:%M %Z")]
+    end
+
+    def sanitize_time(time_split)
+      if time_split[1] == "60"
+        time_split[1] = 0
+        time_split[0] = time_split[0].to_i + 1
+      end
+      time_split
     end
 
     # http://cbc.riocean.com/wstat/012006rose.html
