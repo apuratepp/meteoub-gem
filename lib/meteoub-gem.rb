@@ -5,7 +5,7 @@ require 'active_record'
 module MeteoUB
   DATA_URL   = 'http://infomet.am.ub.es/campbell/www.dat'
   MAXMIN_URL = 'http://infomet.am.ub.edu/campbell/maxmin.dat'
-  
+
   class Data
     attr_accessor :data_uri
     attr_accessor :raw_data
@@ -26,18 +26,16 @@ module MeteoUB
     attr_accessor :temperature_min
     attr_accessor :datetime_min
 
-    def initialize(params = {})
+    def initialize
       @data_uri   = URI(DATA_URL)
       @maxmin_uri = URI(MAXMIN_URL)
       parse if get
     end
-    
+
     def get
       @raw_data   = Net::HTTP.get(@data_uri).split("\n")
       @raw_maxmin = Net::HTTP.get(@maxmin_uri).split("\n")
-      true
-    rescue
-      false
+      @raw_data && @raw_maxmin
     end
 
     def parse
@@ -45,8 +43,8 @@ module MeteoUB
       @temperature          = @raw_data[2].to_f
       @pressure             = @raw_data[10].to_f
       @humidity             = @raw_data[7].to_f
-      @sunrise              = parse_date(@raw_data[19])
-      @sunset               = parse_date(@raw_data[20])
+      @sunrise              = parse_date(@raw_data[19]) if @raw_data[19]
+      @sunset               = parse_date(@raw_data[20]) if @raw_data[20]
       @rain                 = @raw_data[22].to_i == 1
       @precipitation        = @raw_data[21].to_i
       @max_wind_speed       = @raw_data[12].to_f
@@ -55,7 +53,7 @@ module MeteoUB
       @temperature_max, @datetime_max = parse_maxmin(@raw_maxmin[0])
       @temperature_min, @datetime_min = parse_maxmin(@raw_maxmin[1])
     end
-    
+
     def parse_date(date_raw)
       hour, minutes = sanitize_time(date_raw.split(":"))
       DateTime.strptime(@raw_data[0] + " #{hour}:#{minutes} UTC", "%d-%m-%y %k:%M %Z")
