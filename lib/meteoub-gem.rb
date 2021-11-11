@@ -3,8 +3,8 @@ require 'date'
 require 'active_record'
 
 module MeteoUB
-  DATA_URL   = 'http://infomet.am.ub.es/campbell/www.dat'
-  MAXMIN_URL = 'http://infomet.am.ub.edu/campbell/maxmin.dat'
+  DATA_URL   = 'http://infomet.meteo.ub.edu/campbell/www.dat'
+  MAXMIN_URL = 'http://infomet.meteo.ub.edu/campbell/maxmin.dat'
 
   class Data
     attr_accessor :data_uri
