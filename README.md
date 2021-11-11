@@ -8,7 +8,7 @@ A rewrite of the MeteoUB library which gets, parses and stores weather data from
 
 The MIT License (MIT)
 
-Copyright (c) 2009 - 2017 Josep
+Copyright (c) 2009 - 2021 Josep
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
